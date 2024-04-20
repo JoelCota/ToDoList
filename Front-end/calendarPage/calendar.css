@@ -1,0 +1,57 @@
+/* Estilos CSS para el header */
+body{
+  display: inline;
+  margin: 0;
+  color: #FFFFFF ;
+}
+header {
+  background-color: #FFFBF1;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  border-bottom: 1px black solid;
+}
+
+.logo {
+  padding: 10px;
+  width: 25px; /* Ajusta el tamaño del logo según tus necesidades */
+
+}
+.menuBtn{
+  margin: 10px;
+  width: 40px; /* Ajusta el tamaño del logo según tus necesidades */
+
+}
+.notifications {
+  margin: 10px;
+  width: 25px; /* Ajusta el tamaño del logo según tus necesidades */
+}
+.menu {
+  display: none;
+  font-size: 17px;
+  position: absolute;
+  background-color: #FFFFFF;
+  color: black;
+  list-style-type: none;
+  padding: 10px;
+  width: 200px;
+  height:90%;
+  margin-top: auto;
+  border-right: 1px black solid;
+}
+.menu li {
+  padding: 8px ;
+}
+
+.userImg{
+  width: 180px;
+}
+
+.username{ text-align: center;}
+
+#calendar{
+  max-width: 1000px; margin: auto; padding:10px;
+  position: static;
+}
