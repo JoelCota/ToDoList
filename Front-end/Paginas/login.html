@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link href="login_styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="banner">
+        <div class="logo">
+            <img src="tu_logo.png" alt="Logo">
+        </div>
+    </div>
+    <div class="container">
+        <h2 id="titulo-inicio-sesion">Iniciar sesión</h2>
+        <form id="formulario-inicio-sesion" onsubmit="return redirigirADailyTask()">
+            <input type="text" placeholder="Correo electrónico" id="correo-electronico">
+            <input type="password" placeholder="Contraseña" id="contrasena">
+            <input type="submit" value="Iniciar sesión">
+        </form>
+        <div class="links">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+            <a href="registro.html">¿No tienes una cuenta? Regístrate</a>
+        </div>
+    </div>
+
+    <script>
+        function redirigirADailyTask() {
+            window.location.href = "dailyTasks.html";
+            return false; // Para evitar que el formulario se envíe de forma estándar
+        }
+    </script>
+</body>
+</html>

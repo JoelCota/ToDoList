@@ -1,0 +1,135 @@
+body {
+  display: inline;
+  margin: 0;
+  color: black;
+}
+
+header {
+  background-color: #FFFBF1;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px black solid;
+}
+
+.logo {
+  padding: 10px;
+  width: 75px;
+}
+
+.menuBtn {
+  margin: 10px;
+  width: 40px;
+}
+
+.notifications {
+  margin: 10px;
+  width: 25px;
+}
+
+.menu {
+  display: none;
+  font-size: 17px;
+  position: absolute;
+  background-color: #FFFFFF;
+  color: black;
+  list-style-type: none;
+  padding: 10px;
+  width: 200px;
+  height: 90%;
+  margin-top: auto;
+  border-right: 1px black solid;
+  z-index: 1000;
+  transition: 0.5s;
+
+}
+
+.menu li {
+  padding: 8px;
+}
+
+.userImg {
+  width: 180px;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+}
+
+.logout-icon {
+  width: 20px;
+}
+.username {
+  text-align: center;
+}
+
+#calendar {
+  max-width: 750px;
+  margin: auto;
+  padding: 10px;
+  position: static;
+}
+
+.notification-panel {
+  width: 250px;
+  height: 50%;
+  position: fixed;
+  border-right: 1px black solid;
+  right: -250px;
+  background-color: #FFFFFF;
+  color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 1000;
+
+}
+
+.notification-panel.active {
+  right: 0;
+  border-left: 1px black solid;
+  border-bottom: 1px black solid;
+}
+.list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.list-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.list-title {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.list-description {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.list-options {
+  background: #f0f0f0;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.options-menu {
+  display: none;
+  position: absolute;
+  right: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 10;
+}
+
+.list-box:hover .options-menu {
+  display: block;
+}
