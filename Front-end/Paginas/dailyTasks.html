@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyTasks</title>
+    <link rel="stylesheet" href="dailyTasks.css">
+</head>
+<body>
+  <header>
+    <img class="menuBtn" src="Menu.png"></img>
+      <img class="logo" src="tu_logo.png" alt="Logo de la página">
+      <img class="notifications" src="notificationIcon.png"></img>
+  </header>
+  <nav>
+      <ul class="menu">
+          <li><img src="userImg.png" class="userImg"></img></li>
+          <li> <h4 class="username">Joel Antonio Lopez Cota</h2></li>
+          <li><a href="#">My Profile</a></li>
+          <li><a href="dailyTasks.html">Daily Tasks</a></li>
+          <li><a href="tasks.html">Tasks</a></li>
+          <li><a href="lists.html">Lists</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <div class="logout">
+            <li><a href="login.html">Logout</a></li>
+          <li><img src="logout.png"class="logout-icon"></img></li>
+          </div>
+      </ul>
+    
+  </nav>
+  
+ <div id="notification-panel" class="notification-panel">
+    <ul class="notification-list">
+      <li class="notification-item">
+          <h4 class="notification-title">Aviso</h4>
+          <p class="notification-message">Tienes una tarea pendiente para hacer</p>
+      </li>
+      <li class="notification-item">
+          <h4 class="notification-title">Aviso</h4>
+          <p class="notification-message">Tienes una tarea pendiente para hacer</p>
+      </li>
+      <li class="notification-item">
+          <h4 class="notification-title">Aviso</h4>
+          <p class="notification-message">Tienes una tarea pendiente para hacer</p>
+      </li>
+      <li class="notification-item">
+          <h4 class="notification-title">Felicitacion</h4>
+          <p class="notification-message">Felicidades haz completado todas las tareas de la lista</p>
+      </li>
+  </ul>
+</div>
+
+
+
+    <main id="tasks-container">
+        <h2>Daily Tasks</h2>
+        <div class="daily-task">
+            <div class="title-box">
+                <h3 class="task-title">Completar informe</h3>
+                <h4 class="task-date">2024-05-08</h4>
+            </div>
+            <p class="task-description">Preparar un informe detallado sobre el proyecto X</p>
+            <div class="task-actions">
+                <button onclick="event.stopPropagation(); mostrarOpciones(this);">⋮</button>
+                <div class="options-menu">
+                    <a href="editarLista.html">Editar</a>
+                    <a href="#" onclick="eliminarLista(event, this);">Eliminar</a>
+                </div>
+            </div>
+        </div>
+        <div class="daily-task">
+            <div class="title-box">
+                <h3 class="task-title">Reunión de equipo</h3>
+                <h4 class="task-date">2024-05-08</h4>
+            </div>
+            <p class="task-description">Reunión de equipo para revisar el progreso del proyecto</p>
+            <div class="task-actions">
+                <button onclick="event.stopPropagation(); mostrarOpciones(this);">⋮</button>
+                <div class="options-menu">
+                    <a href="editarLista.html">Editar</a>
+                    <a href="#" onclick="eliminarLista(event, this);">Eliminar</a>
+                </div>
+            </div>
+        </div>
+        <div class="daily-task">
+            <div class="title-box">
+                <h3 class="task-title">Enviar correo electrónico</h3>
+                <h4 class="task-date">2024-05-08</h4>
+            </div>
+            <p class="task-description">Enviar un correo electrónico de seguimiento a los clientes</p>
+            <div class="task-actions">
+                <button onclick="event.stopPropagation(); mostrarOpciones(this);">⋮</button>
+                <div class="options-menu">
+                    <a href="editarLista.html">Editar</a>
+                    <a href="#" onclick="eliminarLista(event, this);">Eliminar</a>
+                </div>
+            </div>
+        </div>
+        <div class="daily-task">
+            <div class="title-box">
+                <h3 class="task-title">Llamar a cliente</h3>
+                <h4 class="task-date">2024-05-08</h4>
+            </div>
+            <p class="task-description">Llamar al cliente para discutir los nuevos requisitos</p>
+            <div class="task-actions">
+                <button onclick="event.stopPropagation(); mostrarOpciones(this);">⋮</button>
+                <div class="options-menu">
+                    <a href="editarLista.html">Editar</a>
+                    <a href="#" onclick="eliminarLista(event, this);">Eliminar</a>
+                </div>
+            </div>
+        </div>
+        <div class="daily-task">
+            <div class="title-box">
+                <h3 class="task-title">Preparar presentación</h3>
+                <h4 class="task-date">2024-05-08</h4>
+            </div>
+            <p class="task-description">Preparar una presentación para el cliente</p>
+            <div class="task-actions">
+                <button onclick="event.stopPropagation(); mostrarOpciones(this);">⋮</button>
+                <div class="options-menu">
+                    <a href="editarLista.html">Editar</a>
+                    <a href="#" onclick="eliminarLista(event, this);">Eliminar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <button id="agregarTarea" class="add-tarea-btn" onclick="mostrarModalTarea()">+</button>
+    
+<div id="modalAgregarTarea" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModalTarea()">&times;</span>
+      <h2>Agregar Nueva Tarea</h2>
+      <label for="tituloLista">Título:</label><br>
+      <input type="text" id="tituloLista" name="tituloLista"><br>
+      <label for="descripcionLista">Descripción:</label><br>
+      <textarea id="descripcionLista" name="descripcionLista" rows="4" cols="50"></textarea><br>
+      <label for="fechaLista">Fecha:</label><br>
+      <input type="date" id="fechaLista" name="fechaLista"><br>
+      <button>Agregar Tarea</button>
+    </div>
+  </div>
+<script src="calendar.js"></script>
+
+</body>
+</html>
